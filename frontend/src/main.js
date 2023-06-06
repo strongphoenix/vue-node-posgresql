@@ -1,19 +1,14 @@
-import 'font-awesome/css/font-awesome.css'
 import Vue from 'vue'
-import App from './App'
+import App from '@/App.vue'
+import router from '@/router'
 
-import './config/bootstrap'
-import './config/msgs'
-import './config/axios'
-import './config/mq'
+import auth from '@/auth'
 
-import store from './config/store'
-import router from './config/router'
+Vue.use(auth)
 
 Vue.config.productionTip = false
 
 new Vue({
-  store,
   router,
   render: h => h(App)
 }).$mount('#app')
