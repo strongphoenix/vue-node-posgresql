@@ -27,6 +27,8 @@ module.exports = {
             }
             res.send(results)
         })
+        // console.log(results)
+        // res.send(users)
     },
     deluser: async (req, res, next) => {
         const sentence = `delete from users where id = '` + req.body.id + `'`;
